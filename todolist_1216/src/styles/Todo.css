@@ -1,0 +1,165 @@
+/* 기본 스타일 */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f3f4f7, #cfd4e4);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transition: background 0.3s ease;
+}
+
+body.dark-mode {
+  background: linear-gradient(135deg, #1a1a1a, #2e2e2e);
+  color: #f0f0f0;
+}
+
+.Wrap {
+  width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.Wrap.dark-mode {
+  background-color: #292929;
+  color: #ffffff;
+  border: 1px solid #444444;
+}
+
+.Wrap h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #5267b0;
+}
+
+.Wrap.dark-mode h2 {
+  color: #ffffff;
+}
+
+/* 입력 필드 */
+.inputContainer input {
+  flex: 1;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #d1d9e6;
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.inputContainer input:focus {
+  border-color: #6c85d4;
+}
+
+.inputContainer input.dark-mode {
+  background-color: #333333;
+  border-color: #555555;
+  color: #ffffff;
+}
+
+.inputContainer input.dark-mode:focus {
+  border-color: #777777;
+}
+
+/* 버튼 스타일 */
+button {
+  border: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* 완료 숨기기 버튼 */
+.toggleCompleted {
+  background-color: #6a9ae2;
+  color: #ffffff;
+}
+
+.toggleCompleted:hover {
+  background-color: #4c72c7;
+}
+
+.toggleCompleted.dark-mode {
+  background-color: #444444;
+}
+
+.toggleCompleted.dark-mode:hover {
+  background-color: #555555;
+}
+
+/* 다크 모드 버튼 */
+.toggleDarkMode {
+  background-color: #35478c;
+  color: #ffffff;
+}
+
+.toggleDarkMode:hover {
+  background-color: #2b3d73;
+}
+
+.toggleDarkMode.dark-mode {
+  background-color: #555555;
+}
+
+.toggleDarkMode.dark-mode:hover {
+  background-color: #777777;
+}
+
+/* Todo 리스트 */
+.TodoList {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.TodoItem {
+  background-color: #eef3ff;
+  border: 1px solid #d4e1fa;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.TodoItem:hover {
+  background-color: #d4e1fa;
+}
+
+.TodoItem.dark-mode {
+  background-color: #2a2a2a;
+  border: 1px solid #444444;
+}
+
+.TodoItem.dark-mode:hover {
+  background-color: #333333;
+}
+
+.TodoItem span {
+  flex: 1;
+  font-size: 16px;
+  color: #35478c;
+}
+
+.TodoItem.dark-mode span {
+  color: #cccccc;
+}
+
+.TodoItem.completed span {
+  text-decoration: line-through;
+  color: #999999;
+}

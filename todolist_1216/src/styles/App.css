@@ -1,0 +1,343 @@
+/* 공통 스타일 */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #e0eafc, #cfd4ef);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.Wrap {
+  width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  background-color: #f7faff;
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Wrap h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #35478c;
+  margin-bottom: 15px;
+}
+
+/* 할 일 개수 */
+.statsContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #35478c;
+}
+
+/* 입력 필드 */
+.inputContainer {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.inputContainer input {
+  flex: 1;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #a7b3e0;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inputContainer input:focus {
+  border-color: #5267b0;
+  box-shadow: 0 0 8px rgba(142, 36, 170, 0.3);
+}
+
+.inputContainer button {
+  background-color: #5267b0;
+  color: #f7faff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.inputContainer button:hover {
+  background-color: #35478c;
+}
+
+/* 완료 숨기기 버튼 */
+.controlContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.toggleCompleted {
+  background-color: #6a9ae2;
+  color: #f7faff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggleCompleted:hover {
+  background-color: #4c72c7;
+}
+
+/* Todo 리스트 */
+.TodoList {
+  list-style: none;
+  padding: 0;
+}
+
+.TodoItem {
+  background-color: #eef3ff;
+  border: 1px solid #d4e1fa;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.TodoItem:hover {
+  background-color: #d4e1fa;
+}
+
+.TodoItem span {
+  flex: 1;
+  font-size: 18px;
+  color: #35478c;
+  cursor: pointer;
+}
+
+.TodoItem.completed span {
+  text-decoration: line-through;
+  color: #a1aed8;
+}
+
+button.editButton,
+button.saveButton,
+button.deleteButton {
+  background-color: #5267b0;
+  color: #f7faff;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.editButton:hover,
+button.saveButton:hover {
+  background-color: #35478c;
+}
+
+button.deleteButton {
+  background-color: #6a9ae2;
+}
+
+button.deleteButton:hover {
+  background-color: #4c72c7;
+}
+/* 수정 입력 필드 */
+.editInput {
+  flex: 1;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #a7b3e0;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f7faff; 
+  color: #35478c;
+}
+
+.editInput:focus {
+  border-color: #5267b0;
+  box-shadow: 0 0 8px rgba(82, 103, 176, 0.3); /* 포커스 시 강조 효과 */
+}
+
+/* 다크 모드 */
+body.dark-mode {
+  background: linear-gradient(135deg, #2e2e2e, #1a1a1a);
+  color: #ffffff;
+}
+
+.Wrap.dark-mode {
+  background-color: #1f1f1f;
+  color: #ffffff;
+  border: 1px solid #444444;
+}
+
+.inputContainer input.dark-mode {
+  background-color: #333333;
+  border: 2px solid #666666;
+  color: #ffffff;
+}
+
+.inputContainer input.dark-mode:focus {
+  border-color: #888888;
+}
+
+.inputContainer button.dark-mode {
+  background-color: #555555;
+  color: #ffffff;
+}
+
+.inputContainer button.dark-mode:hover {
+  background-color: #777777;
+}
+.toggleDarkMode{border-radius: 5px;
+border: none; background-color: #555555; color: #fff;
+cursor: pointer; margin-left: 5px;
+}
+.toggleCompleted.dark-mode,
+.toggleDarkMode.dark-mode {
+  background-color: #555555;
+  color: #ffffff;
+}
+
+.toggleCompleted.dark-mode:hover,
+.toggleDarkMode.dark-mode:hover {
+  background-color: #777777;
+}
+
+.TodoItem.dark-mode {
+  background-color: #2a2a2a;
+  border: 1px solid #444444;
+}
+
+.TodoItem.dark-mode span {
+  color: #cccccc;
+}
+
+.TodoItem.completed.dark-mode span {
+  color: #666666;
+}
+/* 공통 글자 스타일 */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #e0eafc, #cfd4ef);
+  color: #35478c; /* 기본 글자색 */
+}
+
+/* 다크 모드: 전체 글자 색상 조정 */
+body.dark-mode {
+  background: linear-gradient(135deg, #2e2e2e, #1a1a1a);
+  color: #e0e0e0; /* 밝은 회색 글자 */
+}
+
+.Wrap {
+  color: inherit; /* 부모 색상 따름 */
+}
+
+.Wrap.dark-mode {
+  color: #e0e0e0;
+}
+
+/* 제목 글자 색상 */
+.Wrap h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #35478c; /* 라이트 모드 */
+}
+
+.Wrap.dark-mode h2 {
+  color: #ffffff; /* 다크 모드 */
+}
+
+/* 통계 섹션 텍스트 */
+.statsContainer {
+  color: #35478c;
+}
+
+.statsContainer.dark-mode {
+  color: #e0e0e0;
+}
+
+/* 입력 필드 */
+.inputContainer input {
+  color: #35478c;
+}
+
+.inputContainer input.dark-mode {
+  color: #e0e0e0;
+}
+
+/* 버튼 텍스트 색상 */
+.inputContainer button,
+.toggleCompleted,
+.toggleDarkMode {
+  color: #ffffff; /* 공통 버튼 글자색 */
+}
+
+.inputContainer button.dark-mode,
+.toggleCompleted.dark-mode,
+.toggleDarkMode.dark-mode {
+  color: #e0e0e0;
+}
+
+/* Todo 아이템 텍스트 */
+.TodoItem span {
+  color: #35478c; /* 기본 텍스트 색상 */
+}
+
+.TodoItem.completed span {
+  color: #a1aed8; /* 완료된 항목 색상 */
+}
+
+.TodoItem.dark-mode span {
+  color: #cccccc; /* 다크 모드 기본 텍스트 */
+}
+
+.TodoItem.completed.dark-mode span {
+  color: #666666; /* 다크 모드 완료 항목 */
+}
+
+/* 수정 입력 필드 */
+.editInput {
+  color: #35478c;
+}
+
+.editInput.dark-mode {
+  color: #e0e0e0;
+}
+
+/* 버튼 그룹 */
+button.editButton,
+button.saveButton,
+button.deleteButton {
+  color: #ffffff; /* 기본 버튼 글자색 */
+}
+
+button.editButton.dark-mode,
+button.saveButton.dark-mode,
+button.deleteButton.dark-mode {
+  color: #e0e0e0; /* 다크 모드 버튼 글자색 */
+}
