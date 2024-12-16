@@ -1,70 +1,155 @@
-# Getting Started with Create React App
+# React 기반 ToDo 리스트 🚀
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+이 프로젝트는 React를 사용해 만든 간단한 ToDo 리스트 애플리케이션입니다. 할 일을 추가하고, 완료 여부를 토글하거나, 수정, 삭제할 수 있습니다. 또한, 다크 모드 전환 기능과 완료된 항목을 숨기거나 보여주는 필터링 기능도 포함되어 있습니다. 
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 1. 프로젝트 개요 📋
 
-### `npm start`
+- **프로젝트 이름**: React 기반 ToDo 리스트
+- **설명**: 이 프로젝트는 React를 활용하여 간단하고 직관적인 UI를 가진 할 일 관리 애플리케이션을 제작하는 것이 목표입니다. 다크 모드 전환, 할 일 관리(추가/수정/삭제/완료)를 통해 기본적인 프론트엔드 기술을 익히기에 적합합니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 2. 주요 기능 ✨
 
-### `npm test`
+- **할 일 추가** ➕: 할 일을 입력하고 추가 버튼을 누르면 새로운 할 일이 생성됩니다.
+- **할 일 완료/미완료 토글** 🔄: 리스트 항목을 클릭하면 완료 상태가 변경됩니다.
+- **할 일 수정** 📝: 수정 버튼을 누르고 새로운 내용을 입력한 후 저장할 수 있습니다.
+- **할 일 삭제** ❌: 삭제 버튼을 눌러 할 일을 제거합니다.
+- **완료 항목 필터링** ✅: 완료된 항목을 숨기거나 다시 표시할 수 있습니다.
+- **다크 모드 지원** 🌙: 버튼을 눌러 라이트/다크 모드를 전환할 수 있습니다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 3. 기술 스택 🛠️
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React**: 컴포넌트 기반 설계와 상태 관리를 위해 사용.
+- **CSS**: 반응형 디자인과 다크 모드 스타일링 구현.
+- **FontAwesome**: 아이콘 사용.
+- **JavaScript (ES6+)**: 최신 문법 활용.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 4. 설치 및 실행 🏃‍♂️
 
-### `npm run eject`
+프로젝트를 실행하려면 아래 단계를 따라 주세요.  
+초보자도 쉽게 따라 할 수 있도록 상세히 작성했습니다.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **프로젝트 클론**
+   - 먼저 프로젝트를 자신의 컴퓨터로 복사해야 합니다. 아래 명령어를 복사해서 터미널에 붙여넣으세요:
+     ```bash
+     git clone [저장소 URL]
+     ```
+   - `[저장소 URL]` 대신 프로젝트 GitHub 주소를 입력하세요.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **프로젝트 디렉토리로 이동**
+   - 클론이 완료되면 해당 폴더로 이동해야 합니다.
+     ```bash
+     cd [프로젝트 폴더]
+     ```
+   - `[프로젝트 폴더]`는 방금 복사한 디렉토리 이름으로 바꿔 주세요.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **필요한 패키지 설치**
+   - 이 프로젝트는 React를 기반으로 하므로 몇 가지 패키지가 필요합니다. 다음 명령어를 실행해 주세요:
+     ```bash
+     npm install
+     ```
+   - 이 단계에서 시간이 조금 걸릴 수 있습니다. 오류가 발생하면 npm이 제대로 설치되었는지 확인하세요.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. **개발 서버 실행**
+   - 이제 애플리케이션을 실행할 차례입니다. 아래 명령어를 실행하면 로컬 서버가 열립니다:
+     ```bash
+     npm start
+     ```
 
-## Learn More
+5. **브라우저에서 확인**
+   - 터미널에 출력된 주소를 클릭하거나 [http://localhost:3000](http://localhost:3000)으로 접속해 애플리케이션을 확인하세요.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 5. 디렉토리 구조 📂
 
-### Code Splitting
+```plaintext
+src/
+│
+├── components/
+│   ├── TodoItem.js      # 각 할 일 항목 컴포넌트
+│   ├── TodoList.js      # ToDo 리스트 컴포넌트
+│
+├── styles/
+│   ├── App.css          # 전체 스타일링
+│
+├── App.js               # 메인 애플리케이션
+├── index.js             # React 진입점
+```
+## 6. 주요 코드 설명 🖥️
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### **`App.js`**
+`App.js`는 이 애플리케이션의 중심 파일로, 상태를 관리하고 주요 로직을 처리합니다.
 
-### Analyzing the Bundle Size
+- **상태 관리 (useState)**:
+  - `todos`: 할 일 목록을 저장하는 배열.
+  - `input`: 입력 필드에 입력된 텍스트를 저장.
+  - `isDarkMode`: 다크 모드 활성화 여부를 관리.
+  - `showCompleted`: 완료된 항목을 표시할지 숨길지 결정.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **주요 함수**:
+  - `addTodo`: 새로운 할 일을 목록에 추가합니다.
+    - 사용자가 텍스트를 입력한 후 추가 버튼을 누르면 실행됩니다.
+    - 입력값이 비어 있으면 추가되지 않도록 방지합니다.
+  - `toggleComplete`: 특정 할 일의 완료 상태를 토글합니다.
+    - 완료 여부를 저장하는 `completed` 속성의 값을 반전시킵니다.
+  - `deleteTodo`: 특정 항목을 삭제합니다.
+    - 클릭한 항목의 `id`를 기반으로 목록에서 제거합니다.
+  - `startEdit` & `saveEdit`: 항목 수정 기능을 처리합니다.
+    - `startEdit`: 수정 상태로 전환하고, 기존 텍스트를 수정할 수 있도록 준비.
+    - `saveEdit`: 수정된 텍스트를 저장하고, 수정 모드를 종료.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### **`TodoList.js`**
+`TodoList.js`는 할 일 목록을 렌더링하는 컴포넌트입니다.
 
-### Advanced Configuration
+- **역할**:
+  - `todos` 배열을 순회하며 각 항목을 `TodoItem` 컴포넌트로 렌더링.
+  - 부모 컴포넌트(`App.js`)에서 전달된 props를 통해 각 항목의 완료/삭제/수정 이벤트를 처리.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+### **`TodoItem.js`**
+`TodoItem.js`는 개별 할 일 항목을 렌더링하고, 각 항목의 이벤트를 처리합니다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **기능**:
+  - **완료 상태 토글**:
+    - 항목 텍스트를 클릭하면 완료 상태가 반전되며, 텍스트 스타일이 변경됩니다.
+  - **수정 모드**:
+    - 수정 버튼을 클릭하면 텍스트를 입력할 수 있는 상태로 전환됩니다.
+    - 수정 후 저장 버튼을 누르면 텍스트가 업데이트됩니다.
+  - **삭제 버튼**:
+    - 항목 삭제를 처리하는 버튼으로, 클릭 시 해당 항목이 목록에서 제거됩니다.
 
-### `npm run build` fails to minify
+- **상태에 따른 렌더링**:
+  - 완료된 항목은 `line-through` 스타일이 적용됩니다.
+  - 수정 중인 항목은 입력 필드로 전환됩니다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+### **CSS**
+`App.css` 파일은 애플리케이션의 스타일을 정의하며, 라이트 모드와 다크 모드를 모두 지원합니다.
+
+- **다크 모드**:
+  - 배경, 텍스트, 버튼의 색상이 어두운 테마로 변경됩니다.
+  - `dark-mode` 클래스를 추가/제거하여 동적으로 스타일을 변경합니다.
+- **반응형 디자인**:
+  - 작은 화면에서도 UI가 깨지지 않도록 구성.
+- **전환 애니메이션**:
+  - 항목 추가/삭제, 버튼 클릭 시 부드러운 애니메이션 효과를 제공합니다.
+
+---
+
+### 주요 흐름 요약
+1. 사용자가 할 일을 입력하고 추가 버튼을 누릅니다.
+2. 새로운 항목이 목록에 추가되며, 완료 상태 토글과 수정, 삭제 기능을 사용할 수 있습니다.
+3. 필요하면 완료된 항목을 숨기거나 다시 표시할 수 있으며, 라이트/다크 모드를 자유롭게 전환할 수 있습니다
+
